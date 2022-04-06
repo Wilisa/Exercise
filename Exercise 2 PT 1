@@ -1,0 +1,19 @@
+Write an algorithm in pseudocode that tests
+whether a string is a palindrome.
+
+def isapalindrome(word): - Define palindrome for the string to be entered
+    if len(word) < 1: - If the length of the string is less than 1
+        return True
+    else:
+        if word[0] == word[-1]: - If the string is equal to the string in reverse in exact position
+            return isapalindrome(word[1:-1])
+        else:
+            return False
+
+
+word = input("Enter a palindrome word: ") - Allow the user to enter any word
+isapalindrome(word) - Call the function
+if isapalindrome(word): - If the function returns True
+    print("This is a palindrome") - The following output will be displayed
+else: - If the function returns False
+    print("This is not a palindrome") - The following output will be displayed
